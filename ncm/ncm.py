@@ -2381,14 +2381,14 @@ class NcmClientv3(BaseNcmClient):
         result = self._return_handler(ncm.status_code, ncm.text, call_type)
         return result
 
-    def get_routers(self, **kwargs):
+    def get_asset_endpoints(self, **kwargs):
         """
-        Returns users with details.
+        Returns assets with details.
         :param kwargs: A set of zero or more allowed parameters
           in the allowed_params list.
-        :return: A list of routers with details.
+        :return: A list of asset endpoints (routers) with details.
         """
-        call_type = 'Routers'
+        call_type = 'Asset Endpoints'
         get_url = f'{self.base_url}/asset_endpoints'
 
         allowed_params = ['id',
