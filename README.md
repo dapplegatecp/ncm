@@ -1,5 +1,5 @@
 # Cradlepoint NCM SDK
-This is a Python client library for Cradlepoint NCM API
+This is a Python client library for Cradlepoint NCM API (both v2 and v3)
 
 INSTALL AND RUN INSTRUCTIONS
 
@@ -8,7 +8,7 @@ INSTALL AND RUN INSTRUCTIONS
     pip3 install ncm
     ```
 
-2. Set NCM API Keys. API Keys must be passed as a dictionary:
+2. Set NCM API v2 Keys. API Keys must be passed as a dictionary:
     ```
     api_keys = {
         'X-CP-API-ID': 'aaaa',
@@ -17,6 +17,17 @@ INSTALL AND RUN INSTRUCTIONS
         'X-ECM-API-KEY': 'dddd'
     }
     ```
+    For API v3 Key it can be included in the same dictionary as token (optional):
+    ```
+    api_keys = {
+        'X-CP-API-ID': 'aaaa',
+        'X-CP-API-KEY': 'bbbb',
+        'X-ECM-API-ID': 'cccc',
+        'X-ECM-API-KEY': 'dddd',
+        "token": 'eeee'
+    }
+    ```
+    Note: if only using v3, just include the token in the dictionary.
 
 3. Import the module and create an instance of the NcmClient object:
    
